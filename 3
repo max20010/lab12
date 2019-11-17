@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+int RingS(double& r1,double& r2) {
+	r1 = 3.14*(pow(r1,2)-pow(r2,2));
+	return r1;
+}
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	double x,x1;
+	for (int i = 0;i < 3;i++) {
+		cout << "Введите радиус большей окружности: ";
+		cin >> x;
+		cout << "Введите радиус меньшей окружности: ";
+		cin >> x1;
+		cout << RingS(x, x1) << endl;
+	}
+}
