@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+int Fact2(int& x,int& i) {
+	int n=1;
+	if (i != 1) {
+		i = 2;
+	}
+	for (i;i <= x;i += 2) {
+		n *= i;
+	}
+	return n;
+}
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int x, i;
+	cin >> x;
+	i = x % 2;
+	cout << Fact2(x, i) << endl;
+}
